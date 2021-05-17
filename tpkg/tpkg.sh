@@ -13,7 +13,7 @@ function update(){
 	mkdir ~/.tpkg_cache
 	mkdir ~/.tpkg_extract_dir
 	ping -c 8 $ping_check
-	exit 0
+
 }
 
 function install(){
@@ -29,7 +29,7 @@ function install(){
 	else 
     	echo "tpkg: Error Postinstall Script Not Found"
 	fi
-	exit 0
+
 
 }
 echo tpkg: Usage: tpkg update or tpkg install packagename
