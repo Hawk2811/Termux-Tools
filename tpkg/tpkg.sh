@@ -13,6 +13,7 @@ update(){
 	mkdir ~/.tpkg_cache
 	mkdir ~/.tpkg_extract_dir
 	ping -c 8 $ping_check
+	exit 0
 }
 
 install_package(){
@@ -28,20 +29,7 @@ install_package(){
 	else 
     	echo "tpkg: Error Postinstall Script Not Found"
 	fi
+	exit 0
 
 }
-
-main(){
-	if [[ "$1" == "update" ]]; then
-		update
-	fi
-
-	if [[ "$1" == "install" ]]; then
-		install $2
-	fi
-
-	if [[ "$1" == "" ]]; then
-		echo tpkg: Usage: tpkg update or tpkg install packagename
-	fi
-}
-main
+echo tpkg: Usage: tpkg update or tpkg install packagename
