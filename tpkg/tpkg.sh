@@ -8,7 +8,7 @@ set package_repo="https://raw.githubusercontent.com/Hawk2811/termux-packages/mai
 #set package_repo="https://raw.githubusercontent.com/Hawk2811/termux-packages/main/unstable/"
 #set package_repo="yourrepository.com/unstable"
 
-update(){
+function update(){
 	echo Creating Cache Dir
 	mkdir ~/.tpkg_cache
 	mkdir ~/.tpkg_extract_dir
@@ -16,7 +16,7 @@ update(){
 	exit 0
 }
 
-install_package(){
+function install(){
 	local pkg="$2"
 	[[ -z $pkg ]] && { echo "tpkg: Package Not specified"; exit 1; }
 	wget $package_repo$pkg.zip -O ~/.tpkg_cache/$pkg.zip
