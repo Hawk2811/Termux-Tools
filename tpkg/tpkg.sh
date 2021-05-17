@@ -41,7 +41,7 @@ main(){
 	fi
 
 	if [[ "$1" == "" ]]; then
-		tpkg: Usage: tpkg update or tpkg install packagename
+		echo tpkg: Usage: tpkg update or tpkg install packagename
 	fi
 }
 main
