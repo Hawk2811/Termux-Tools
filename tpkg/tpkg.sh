@@ -31,10 +31,17 @@ install_package(){
 
 }
 
-if [[ "$1" == "update" ]]; then
-	update
-fi
+main(){
+	if [[ "$1" == "update" ]]; then
+		update
+	fi
 
-if [[ "$1" == "install" ]]; then
-	install $2
-fi
+	if [[ "$1" == "install" ]]; then
+		install $2
+	fi
+
+	if [[ "$1" == "" ]]; then
+		tpkg: Usage: tpkg update or tpkg install packagename
+	fi
+}
+main
