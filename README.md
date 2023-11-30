@@ -1,5 +1,4 @@
 # This Project Has Been Discontinued
-# I am no longer developing for Android or Termux platforms
 
 ## Termux-Tools
 Termux Extra Tools
